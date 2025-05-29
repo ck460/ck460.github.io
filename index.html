@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>我的视频</h1>
-    <video controls width="640" height="480">
-      <source src="视频名.mp4" type="video/mp4">
-      你的浏览器不支持视频播放。
-    </video>
-  </body>
+<head>
+    <title>媒体中心</title>
+    <style> /* 简单样式，可分离到style.css */
+        .media { margin: 20px; }
+        video, audio, img { max-width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>多媒体展示</h1>
+
+    <!-- 图片展示 -->
+    <div class="media">
+        <img src="assets/media/image.jpg" alt="图片" width="640">
+    </div>
+
+    <!-- 音频自动播放（静音，符合浏览器策略） -->
+    <div class="media">
+        <audio autoplay muted controls>
+            <source src="assets/media/audio.mp3" type="audio/mpeg">
+            不支持音频。
+        </audio>
+    </div>
+
+    <!-- 视频自动播放（静音，符合浏览器策略） -->
+    <div class="media">
+        <video autoplay muted controls width="640">
+            <source src="assets/media/video.mp4" type="video/mp4">
+            不支持视频。
+        </video>
+    </div>
+
+    <!-- 文件下载（示例PDF，需用户点击） -->
+    <div class="media">
+        <a href="assets/media/document.pdf" download>下载PDF</a>
+    </div>
+</body>
 </html>
