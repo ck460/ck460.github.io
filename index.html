@@ -10,34 +10,31 @@
 <body>
     <h1>多媒体展示</h1>
 
-    <!-- 图片展示 -->
+    <!-- 图片展示（直接引用根目录图片） -->
     <div class="media">
-        <img src="assets/media/image.jpg" alt="图片" width="640">
+        <img src="image.jpg" alt="图片" width="640"> <!-- 路径改为根目录 -->
     </div>
 
-    <!-- 音频自动播放（静音，符合浏览器策略） -->
+    <!-- 音频自动播放（静音，符合浏览器策略，直接引用根目录音频） -->
     <div class="media">
         <audio autoplay muted controls>
-            <source src="assets/media/audio.mp3" type="audio/mpeg">
+            <source src="audio.mp3" type="audio/mpeg"> <!-- 路径改为根目录 -->
             不支持音频。
         </audio>
     </div>
 
-
-    
-
-
-    <!-- 视频自动播放（静音，符合浏览器策略） -->
+    <!-- 视频自动播放（静音，符合浏览器策略，直接引用根目录视频） -->
     <h1>我的视频</h1>
+    <div class="media"> <!-- 补充缺失的div标签 -->
         <video autoplay muted controls width="640">
-            <source src="视频名.mp4" type="video/mp4">
+            <source src="视频名.mp4" type="video/mp4"> <!-- 路径改为根目录 -->
             不支持视频。
         </video>
     </div>
 
-    <!-- 文件下载（示例PDF，需用户点击） -->
+    <!-- 文件下载（示例PDF，需放在根目录） -->
     <div class="media">
-        <a href="assets/media/document.pdf" download>下载PDF</a>
+        <a href="document.pdf" download>下载PDF</a> <!-- 路径改为根目录 -->
     </div>
 </body>
 </html>
