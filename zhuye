@@ -1,10 +1,11 @@
 repo-name/
 ├── index.html         # 主页
-├── css/               # 样式文件
-│   └── style.css
-├── js/                # 脚本文件
-│   └── script.js
-└── media/             # 媒体文件（建议压缩后上传）
-    ├── audio.mp3
-    └── video.mp4
-git add . && git commit -m "Update" && git push
+├── assets/            # 资源目录
+│   ├── media/         # 媒体文件（视频、音频、图片）
+│   │   ├── video.mp4  # 视频（H.264编码，压缩后）
+│   │   ├── audio.mp3  # 音频（MP3）
+│   │   └── image.jpg  # 图片（JPG/PNG）
+│   ├── css/           # 样式（可选）
+│   │   └── style.css
+│   └── js/            # 脚本（可选）
+│       └── script.js
