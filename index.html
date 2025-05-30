@@ -2,64 +2,39 @@
 <html>
 <head>
     <title>媒体中心</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 20px; }
-        .media { margin: 20px 0; }
-        img, video, audio { 
-            max-width: 100%; 
-            height: auto; 
-            display: block; 
-            border-radius: 6px; 
-        }
-        h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .media h2 { color: #666; font-size: 1.2em; margin-bottom: 10px; }
+        .media { margin: 20px; }
+        video, audio, img { max-width: 100%; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>多媒体展示</h1>
+    <h1>多媒体展示</h1>
 
-        <!-- 图片展示 -->
-        <div class="media">
-            <img src="imggg.jpg" alt="仓库图片" width="640" loading="lazy">
-            <p style="color: #666; font-size: 0.9em;">图片路径：imggg.jpg（根目录）</p>
-        </div>
+    <!-- 图片展示（确保 image.jpg 存在于根目录） -->
+    <div class="media">
+        <img src="image.jpg" alt="图片" width="640">
+    </div>
 
-        <!-- 音频功能（文件名：ccccccc.mp3） -->
-        <div class="media">
-            <h2>背景音乐</h2>
-            <audio 
-                controls 
-                muted 
-                <!-- autoplay -->  <!-- 取消自动播放（需用户交互，如需静音自动播放可取消注释） -->
-                preload="metadata"
-            >
-                <source src="ccccccc.mp3" type="audio/mpeg">
-                <!-- 可选：添加ogg格式增强兼容性 -->
-                <!-- <source src="ccccccc.ogg" type="audio/ogg"> -->
-                <p>您的浏览器不支持音频播放</p>
-            </audio>
-            <p>提示：请确保根目录存在 ccccccc.mp3 文件</p>
-        </div>
+    <!-- 音频（若有 audio.mp3，否则注释掉） -->
+    <div class="media">
+        <audio autoplay muted controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            不支持音频。
+        </audio> <!-- 之前未闭合，已修正 -->
+    </div>
 
-        <!-- 视频功能（文件名：ccccccc.mp4） -->
-        <div class="media">
-            <h2>宣传视频</h2>
-            <video 
-                controls 
-                width="100%" 
-                height="360" 
-                poster="video-thumbnail.jpg"  <!-- 可选：添加视频封面图 -->
-                preload="auto"
-            >
-                <source src="ccccccc.mp4" type="video/mp4">
-                <!-- 可选：添加webm格式增强兼容性 -->
-                <!-- <source src="ccccccc.webm" type="video/webm"> -->
-                <p>您的浏览器不支持视频播放</p>
-            </video>
-            <p>提示：请确保根目录存在 ccccccc.mp4 文件</p>
-        </div>
+    <!-- 视频（替换 视频名.mp4 为实际文件名，如 video.mp4，确保存在） -->
+    <h1>我的视频</h1>
+    <div class="media">
+        <video autoplay muted controls width="640">
+            <source src="video.mp4" type="video/mp4"> <!-- 示例：替换为实际视频名 -->
+            不支持视频。
+        </video>
+    </div>
+
+    <!-- 下载（若有 document.pdf，否则注释掉） -->
+    <div class="media">
+        <a href="document.pdf" download>下载PDF</a>
     </div>
 </body>
 </html>
